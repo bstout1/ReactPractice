@@ -1,11 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import '../App.css';
+
+import TrackList from '../TrackList/TrackList';
 
 function Playlist() {
     return (
-        <p>Playlist</p>
-    )
-}
+        <div>
+            <TrackList 
+                tracks={"track1"}
+                key={1} 
+                isRemoval={true} 
+                onAdd={true}
+                onRemove={true} 
+            />
+        </div>
+    );
+};
 
 export default Playlist;

@@ -1,28 +1,21 @@
-import logo from './logo.svg';
+import React, { useState, useCallback } from "react";
 import './App.css';
 
 import SearchBar from './SearchBar/SearchBar';
 import SearchResults from './SearchResults/SearchResults';
 import Playlist from './Playlist/Playlist';
-import Tracklist from './Tracklist/Tracklist';
-import Track from './Track/Track'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div>
+      <h1> Ja<span className="highlight">mmm</span>ing</h1>
+      <div className="App">
         <SearchBar />
-        <SearchResults />
-        <Playlist />
-        <Tracklist />
-        <Track />
-        <p>
-          Jammming Project @ Codecademy
-        </p>
-        <button>Save to Spotify</button>
-        <button>Search</button>
-      </header>
+        <div className="App-playlist">
+          <SearchResults />
+          <Playlist />
+        </div>  
+      </div>
     </div>
   );
 }
