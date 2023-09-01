@@ -13,7 +13,7 @@ function App() {
   const [playlistTracks, setPlaylistTracks] = useState([]);
 
   const search = useCallback((term) => {
-    Spotify.search(erm).then(setSearchResults);
+    Spotify.search(term).then(setSearchResults);
   }, []);
 
   const addTrack = useCallback((track) => {
@@ -48,7 +48,7 @@ function App() {
         <SearchBar onSearch={search}/>
         <div className="App-playlist">
           <SearchResults searchResults={searchResults} onAdd={addTrack}/>
-          <Playlist playlistName={playlistName} playlistTracks={playlistTracks} onNameChange={updatePlaylistName} onRemove={removeTrack} onSave={savePlalist} />
+          <Playlist playlistName={playlistName} playlistTracks={playlistTracks} onNameChange={updatePlaylistName} onRemove={removeTrack} onSave={savePlaylist} />
         </div>  
       </div>
     </div>
